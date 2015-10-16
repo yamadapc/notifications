@@ -1,0 +1,24 @@
+{
+  "name": "toggl-notifier",
+  "version": "1.0.0",
+  "description": "Shows notifications everytime a Toggl event happens",
+  "main": "toggl-notifier",
+  "bin": "toggl-notifier",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yamadapc/toggl-notifier"
+  },
+  "bugs": {
+    "url": "https://github.com/yamadapc/toggl-notifier/issues"
+  },
+  "homepage": "https://github.com/yamadapc/toggl-notifier",
+  "author": "Pedro Tacla Yamada",
+  "license": "MIT",
+  "dependencies": {
+    "node-notifier": "^4.3.1",
+    "toggl-events": "^1.0.0"
+  }
+}

@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+var TogglEvents = require('toggl-events');
+var notifier = require('node-notifier');
+
+TogglEvents.onMessage(function(msg) {
+  var title = msg.action ? msg.action.toLowerCase() : 'Unknown event';
+  title = title.charAt(0).toUpperCase() + title.slice(1);
+  console.log(title);
+  console.log(msg);
+  console.log('---');
+  notifier.notify({
+    title: title,
+    message: title + ' ' + msg.model + ' ' + msg.data.id
+  });
+});
