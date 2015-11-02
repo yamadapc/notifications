@@ -1,6 +1,6 @@
 {
   "name": "toggl-notifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shows notifications everytime a Toggl event happens",
   "main": "toggl-notifier",
   "bin": "toggl-notifier",
