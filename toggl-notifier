@@ -2,7 +2,16 @@
 var TogglEvents = require('toggl-events');
 var notifier = require('node-notifier');
 
-TogglEvents.onMessage(function(msg) {
+var events = new TogglEvents();
+
+events.on('error', function(err) {
+  console.log(
+    'Had an error, most likely Toggl WebSockets are down (' + err.message + ')'
+  );
+  process.exit(1);
+});
+
+events.on('message', function(msg) {
   var title = msg.action ? msg.action.toLowerCase() : 'Unknown event';
   title = title.charAt(0).toUpperCase() + title.slice(1);
   console.log(title);
